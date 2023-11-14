@@ -1,0 +1,92 @@
+.container-fluid {
+    padding: 0%;
+    margin: 0%;
+}
+
+.navbar-brand {
+    font-size: 37.5px;
+    color: blue;
+}
+
+.navbar-light .navbar-nav .nav-item {
+    color: Blue;
+    font-size: 22.5px;
+}
+
+.form-control {
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.btn-outline-success {
+    color: #000; 
+    border-color: #000;
+    border: solid 1.5px;
+    border-radius: 10px;
+}
+.btn-outline-success:hover {
+    color: #fff; 
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+
+/* This is for tablet */
+@media screen and (max-width: 768px) and (min-width: 319px) {
+    .navbar-brand {
+        font-size: 40px;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-toggler {
+        border-color: blue; 
+        /* background-color: blue; */
+        border-width: 1.5px; 
+        border-radius: 10px;
+    }
+    .navbar-toggler.collapsed {
+        border-color: black;
+        /* background-color: blue; */
+        color: white;
+    }
+    .navbar-toggler-icon {
+        font-size: 30px; 
+        color: blue;
+    }
+}
+
+/* This is for mobile */
+@media screen and (max-width: 320px) {
+    .container-fluid {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .navbar-brand {
+        font-size: 25px;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-toggler {
+        border-color: blue; 
+        /* background-color: blue; */
+        border-width: 1.5px;
+        border-radius: 10px; 
+    }
+    .navbar-toggler.collapsed {
+        border-color: black;
+        /* background-color: blue; */
+        color: white;
+    }
+    .navbar-toggler-icon {
+        font-size: 15px; 
+        color: blue;
+    }
+}

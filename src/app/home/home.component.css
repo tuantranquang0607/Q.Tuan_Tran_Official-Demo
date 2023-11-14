@@ -1,0 +1,92 @@
+.home{
+    /* background-image: url('../../assets/images/HCM_Mausoleum.jpg');
+    background-size: cover;
+    background-position: center; */
+    display: grid;
+    place-content: center;
+    width: auto;
+    height: 87.5vh;
+    color: white; /* Added text color for visibility */
+    background-color: white;
+    /* opacity: 0.75; */
+    position: relative;
+    isolation: isolate;
+}
+.home::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: white;
+    opacity: 0.75;
+    background-image: url('../../assets/images/HCM_Mausoleum.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* .home img {
+    width: 100%;
+    height: 800px;
+    object-position: center;
+    object-fit: cover;
+    opacity: 0.75;
+    border-radius: 10px;
+} */
+
+.name {
+    color: darkblue;
+    font-size: 50px;
+}
+
+.introduction {
+    font-size: 42.5px;
+    color: black;
+    margin-left: 0px;
+}
+
+.homeContent {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+.homeContent a {
+    opacity: 0.75;
+}
+
+@media screen and (max-width: 320px) {
+    /* .home img {
+        width: 100%;
+        height: 800px;
+        object-position: center;
+        object-fit: cover;
+        opacity: 0.75;
+        border-radius: 10px;
+        size: cover;
+    } */
+
+    .introduction {
+        color: black;
+        font-size: 25px;
+        justify-content: center;
+    }
+    .introduction .text {
+        display: block;
+        justify-content: center;
+    }
+
+    .homeContent {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        /* justify-content: center; */
+        text-align: center;
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .btn {
+        margin-top: 5px; 
+    }
+}
