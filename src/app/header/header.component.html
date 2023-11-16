@@ -1,42 +1,34 @@
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary"> this makes the nav bar a slight colour background-->
-<nav class="navbar navbar-expand-lg navbar-light"> <!-- The navbar-light gives the navbar a light theme -->
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="home">Q. Tuan Tran</a>
+<header>
+  <nav id="desktop-nav">
+    <div class="logo">Q. Tuan Tran</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="home">Home</a></li>
+        <li><a href="web-projects">Web Projects</a></li>
+        <li><a href="game-projects">Game Projects</a></li>
+        <li><a href="ui-projects">UI Projects</a></li>
+        <li><a href="artworks">Artworks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <button class="navbar-toggler" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" 
-              aria-controls="navbarSupportedContent" 
-              aria-expanded="false" 
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav ml-auto mb-2 mb-lg-0"></ul>  This moves the nav to the left. ml stands for margin-left -->
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-1">  <!-- ms stands for margin-start -->
-          <li class="nav-item">
-            <a class="nav-link" routerLink="home" data-text="Home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="web-projects" data-text="We Projects">Web Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="game-projects" data-text="Game Projects">Game Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="ui-projects" data-text="UI Projects">UI Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="artworks" data-text="Artworks">Artworks</a>
-          </li>
-        </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control form-control-sm me-1" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+  <nav id="hamburger-nav">
+    <div class="logo">Q. Tuan Tran</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="home">Home</a></li>
+        <li><a href="web-projects" (click)="toggleMenu()">Web Projects</a></li>
+        <li><a href="game-projects" (click)="toggleMenu()">Game Projects</a></li>
+        <li><a href="ui-projects" (click)="toggleMenu()">UI Projects</a></li>
+        <li><a href="artworks" (click)="toggleMenu()">Artworks</a></li>
+        <li><a href="#contact" (click)="toggleMenu()">Contact</a></li>
       </div>
     </div>
-</nav>
+  </nav>
+</header>

@@ -10,7 +10,7 @@ export class HomeComponent {
   // Text typing and loopback effect for single word.
   ngAfterViewInit(): void {
     const typed = new Typed(".text", {
-      strings: ["a Full-stack developer.", "a Game developer.", "an UI designer😝", "a digital artist🤔"],
+      strings: ["a Full-stack developer!", "a Game developer!", "an UI designer!", "a digital artist!"],
       typeSpeed: 50,
       backSpeed: 25,
       backDelay: 50,

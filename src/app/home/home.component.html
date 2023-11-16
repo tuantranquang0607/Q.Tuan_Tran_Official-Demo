@@ -1,48 +1,245 @@
-<!-- <p>home works!</p> -->
+<!-- Introduction container -->
+<section id="profile">
+  <div class="section__pic-container">
+    <img src="../../assets/images/right-face-selfie.jpg" alt="Q. Tuan Tran profile picture" style="border-radius: 2rem;"/>
+  </div>
 
-<section class="home">
-    <img src="../../assets/images/minimal-wallpaper.jpg">
-    
-    <div class="homeContent">
-        <h1 class="introduction">
-          Hi👋, I'm <span class="name">Tuan</span>(/tʊʌn/), <br>
-          <p class="loopBackText">who's trying to be <span class="text"></span></p>
-        </h1>
-        <a href="#" class="btn btn-lg btn-light">More</a> 
+  <div class="section__text">
+    <p class="section__text__p1">Hello👋, I'm <span class="name">Tuan</span>(/tʊʌn/)😊,</p>
+    <p class="section__text__p2">who's trying to be <span class="text"></span></p>
+
+    <div class="btn-container">
+      <button
+        class="btn btn-color-2"
+        onclick="window.open('../../assets/images/Tuan Tran - Resume.pdf')"
+      >Download CV
+      </button>
+
+      <button class="btn btn-color-1" onclick="location.href='./#contact'">
+        Contact Info
+      </button>
     </div>
+
+    <div id="socials-container">
+      <img
+        src="../../assets/images/linkedin.png"
+        alt="My LinkedIn profile"
+        class="icon"
+        onclick="location.href='https://www.linkedin.com/in/tuan-tran-82371a257/'"
+      />
+      <img
+        src="../../assets/images/github.png"
+        alt="My Github profile"
+        class="icon"
+        onclick="location.href='https://github.com/tuantranquang0607'"
+      />
+      <img
+        src="../../assets/images/facebook.png"
+        alt="My Facebook profile"
+        class="icon"
+        onclick="location.href='https://www.facebook.com/profile.php?id=100030823129717'"
+      />
+      <img
+        src="../../assets/images/email.png"
+        alt="My Email"
+        class="icon"
+        onclick="location.href='mailto:tuan.tran6703@gmail.com'"
+      />
+    </div>
+  </div>
+
+  <img
+    src="../../assets/images/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#about'"
+  />
 </section>
 
-<!-- Introduce about myself -->
-<!-- <div class="heading-1">
-    <header>
-      <h1>About me 👇🏻</h1>
-    </header>
-</div>
+<!-- About container -->
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
 
-<div id="home-page-2">
-    <p class="paragraph-1">
-      Born in a vibrant and bustling city on the northeastern edge of the Pacific Ocean, 
-      I am Quang Tuan Tran—Tuan being my first name, Quang my middle name, and Tran my last name. 
-      In the spirit of 'When in Rome, do as the Romans do,' I embraced the name Thomas, inspired by the inventor of Thomas Edison. 
-      Thriving in my city of origin, I embarked on a transformative journey to Canada, driven by the ambition to pursue my dreams. 
-      Throughout my academic tenure at NBCC, I meticulously honed my skills in a diverse array of programming languages and frameworks, 
-      including C++, HTML, CSS, Java, JavaScript, TypeScript, Angular, and more.</p>
-    
-</div> -->
-  
-<!-- Introduce about my website -->
-<!-- <div>
-    <header class="heading-2">
-      <h1>About this website 👇🏻</h1>
-    </header>
-</div>
-<div id="home-page-3">
-    <p>
-      This website marks the inception of my inaugural personal portfolio project, serving as a repository for showcasing my work and sharing valuable insights. 
-      Leveraging the open-source Angular framework, complemented by HTML, CSS, JavaScript, and TypeScript, I have crafted and deployed this site seamlessly through Netlify. 
-      The journey of this project has been an invaluable long learning experience, presenting an array of challenges that have not only honed my debugging skills but also enriched my knowledge base. 
-      As a developer, these encounters have significantly elevated my problem-solving abilities, underscoring the dynamic and evolving nature of web development.
-    </p>
-</div> -->
+  <h1 class="title">About Me</h1>
+
+  <div class="section-container">
+    <div class="section__pic-container">
+      <img
+        src="../../assets/images/cool-selfie.jpg"
+        alt="Profile picture"
+        class="about-pic"
+      />
+    </div>
+
+    <div class="about-details-container">
+      <div class="text-container-1">
+        <p>
+          Born in a vibrant and bustling city on the northeastern edge of the Pacific Ocean, 
+        I am Quang Tuan Tran—Tuan being my first name, Quang my middle name, and Tran my last name. 
+        In the spirit of 'When in Rome, do as the Romans do,' I embraced the name Thomas, inspired by the inventor of Thomas Edison. 
+        Thriving in my city of origin, I embarked on a transformative journey to Canada, driven by the ambition to pursue my dreams. 
+        Throughout my academic tenure at NBCC, I meticulously honed my skills in a diverse array of programming languages and frameworks, 
+        including C++, HTML, CSS, Java, JavaScript, TypeScript, Angular, and more.
+        </p>
+      </div>
+      <br>
+      <p class="text-container-2">
+        This website marks the inception of my inaugural personal portfolio project, serving as a repository for showcasing my work and sharing valuable insights. 
+        Leveraging the open-source Angular framework, complemented by HTML, CSS, JavaScript, and TypeScript, I have crafted and deployed this site seamlessly through Netlify. 
+        The journey of this project has been an invaluable long learning experience, presenting an array of challenges that have not only honed my debugging skills but also enriched my knowledge base. 
+        As a developer, these encounters have significantly elevated my problem-solving abilities, underscoring the dynamic and evolving nature of web development.
+      </p>
+    </div>
+  </div>
+
+  <img
+    src="../../assets/images/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#projects'"
+  />
+</section>
+
+<!-- Projects container -->
+<section id="projects">
+  <p class="section__text__p1">Browse My Recent</p>
+
+  <h1 class="title">Projects</h1>
+
+  <div class="experience-details-container">
+    <div class="about-containers">
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-1.png"
+            alt="Project 1"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Project One</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-2.png"
+            alt="Project 2"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Two</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-3.png"
+            alt="Project 3"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+
+      <div class="details-container color-container">
+        <div class="article-container">
+          <img
+            src="./assets/project-3.png"
+            alt="Project 3"
+            class="project-img"
+          />
+        </div>
+        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Github
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='https://github.com/'"
+          >
+            Live Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img
+    src="../../assets/images/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#contact'"
+  />
+</section>
+
+<!-- Contact container -->
+<section id="contact">
+  <p class="section__text__p1">Get in Touch</p>
+  <h1 class="title">Contact Me</h1>
+  <div class="contact-info-upper-container">
+    <div class="contact-info-container">
+      <img
+        src="./assets/email.png"
+        alt="Email icon"
+        class="icon contact-icon email-icon"
+      />
+      <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+    </div>
+    <div class="contact-info-container">
+      <img
+        src="./assets/linkedin.png"
+        alt="LinkedIn icon"
+        class="icon contact-icon"
+      />
+      <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
 
 
