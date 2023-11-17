@@ -18,7 +18,8 @@ nav {
   top: 0;           /* Stick it to the top of the viewport */
   width: 100%;      /* Make it full-width */
   z-index: 1000;    /* Adjust the z-index as needed */
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(7.5px);
 }
 .nav-links {
   gap: 2rem;
@@ -105,6 +106,7 @@ a:hover::before {
   right: 0;
   width: fit-content;
   max-height: 0;
+  width: 1000%;
   overflow: hidden;
   transition: all 0.3 ease-in-out;
 }
@@ -119,9 +121,13 @@ a:hover::before {
 }
 .menu-links li {
   list-style: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(7.5px);
 }
 .menu-links.open {
-  max-height: 300px;
+  max-height: 3000px;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(7.5px);
 }
 
 
@@ -129,8 +135,14 @@ a:hover::before {
   #desktop-nav {
       display: none;
   }
+  
   #hamburger-nav {
       display: flex;
+  }
+
+  .menu-links.open {
+    left: 0;
+    right: 0;
   }
 }
 
@@ -138,10 +150,15 @@ a:hover::before {
   .logo {
       font-size: 1.5rem;
   }
+
   .nav-links {
       flex-direction: column;
       gap: 0.5rem;
       text-align: center;
+  }
+
+  .menu-links.open {
+    top: 150%;
   }
 }
   

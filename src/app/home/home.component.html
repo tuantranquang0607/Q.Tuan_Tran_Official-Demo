@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+<script defer src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+
 <!-- Introduction container -->
 <section id="profile">
   <div class="section__pic-container">
@@ -16,7 +19,7 @@
       </button>
 
       <button class="btn btn-color-1" onclick="location.href='./#contact'">
-        Contact Info
+        Contact Infomation
       </button>
     </div>
 
@@ -105,18 +108,18 @@
   <p class="section__text__p1">Browse My Recent</p>
 
   <h1 class="title">Projects</h1>
-
+  <br>
   <div class="experience-details-container">
     <div class="about-containers">
       <div class="details-container color-container">
         <div class="article-container">
           <img
-            src="./assets/project-1.png"
-            alt="Project 1"
+            src="../../assets/images/project-1.png"
+            alt="Web Projects"
             class="project-img"
           />
         </div>
-        <h2 class="experience-sub-title project-title">Project One</h2>
+        <!-- <h2 class="experience-sub-title project-title">Project One</h2>
         <div class="btn-container">
           <button
             class="btn btn-color-2 project-btn"
@@ -130,18 +133,18 @@
           >
             Live Demo
           </button>
-        </div>
+        </div> -->
       </div>
 
       <div class="details-container color-container">
         <div class="article-container">
           <img
-            src="./assets/project-2.png"
-            alt="Project 2"
+            src="../../assets/images/project-2.png"
+            alt="Game Projects"
             class="project-img"
           />
         </div>
-        <h2 class="experience-sub-title project-title">Project Two</h2>
+        <!-- <h2 class="experience-sub-title project-title">Project Two</h2>
         <div class="btn-container">
           <button
             class="btn btn-color-2 project-btn"
@@ -155,18 +158,18 @@
           >
             Live Demo
           </button>
-        </div>
+        </div> -->
       </div>
 
       <div class="details-container color-container">
         <div class="article-container">
           <img
-            src="./assets/project-3.png"
-            alt="Project 3"
+            src="../../assets/images/project-3.png"
+            alt="UI Projects"
             class="project-img"
           />
         </div>
-        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <!-- <h2 class="experience-sub-title project-title">Project Three</h2>
         <div class="btn-container">
           <button
             class="btn btn-color-2 project-btn"
@@ -180,18 +183,18 @@
           >
             Live Demo
           </button>
-        </div>
+        </div> -->
       </div>
 
       <div class="details-container color-container">
         <div class="article-container">
           <img
-            src="./assets/project-3.png"
-            alt="Project 3"
+            src="../../assets/images/project-3.png"
+            alt="Artworks"
             class="project-img"
           />
         </div>
-        <h2 class="experience-sub-title project-title">Project Three</h2>
+        <!-- <h2 class="experience-sub-title project-title">Project Three</h2>
         <div class="btn-container">
           <button
             class="btn btn-color-2 project-btn"
@@ -205,7 +208,7 @@
           >
             Live Demo
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -220,26 +223,36 @@
 
 <!-- Contact container -->
 <section id="contact">
-  <p class="section__text__p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <div class="contact-info-upper-container">
-    <div class="contact-info-container">
-      <img
-        src="./assets/email.png"
-        alt="Email icon"
-        class="icon contact-icon email-icon"
-      />
-      <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+  <p class="section__text__p1">Get in Touch</p> 
+  <br>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm); false" (ngReset)="onClear(contactForm)">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" id="firstName" name="firstName" ngModel required style="border-radius: 12.5px;">
+        <label for="firstName" ><i class="fas fa-users"></i> Your first name😊</label>
+      </div>
+  
+      <div class="input-group">
+        <input type="text" id="lastName" name="lastName" ngModel required style="border-radius: 12.5px;">
+        <label for="lastName"><i class="fas fa-users"></i> Your last name😉</label>
+      </div>
     </div>
-    <div class="contact-info-container">
-      <img
-        src="./assets/linkedin.png"
-        alt="LinkedIn icon"
-        class="icon contact-icon"
-      />
-      <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+    
+    <div class="input-group">
+      <input type="email" id="email" name="email" ngModel required style="border-radius: 12.5px;">
+      <label for="email"><i class="fa-solid fa-at"></i> Your email address😚</label>
     </div>
-  </div>
+  
+    <div class="input-group">
+      <textarea id="message" name="message" rows="8" ngModel required style="border-radius: 12.5px;"></textarea>
+      <label for="message"><i class="fas fa-comments"></i> What is it in your mind?🤔</label>
+    </div>
+  
+    <div class="button">
+      <button type="submit">Submit <i class="fa-solid fa-paper-plane"></i></button>
+      <button type="reset">Clear <i class="fa-sharp fa-solid fa-trash"></i></button>
+    </div>
+  </form>
 </section>
 
 
