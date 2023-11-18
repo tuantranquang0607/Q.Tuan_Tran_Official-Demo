@@ -20,7 +20,7 @@
 /* SECTIONS */
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 95vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -32,37 +32,41 @@ section {
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* PROFILE SECTION */
 #profile {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   gap: 5rem;
   /* height: 80vh; */
   position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  /* padding-top: 0; */
+  margin-top: 15%;
+  /* margin-bottom: 0;
+  padding-bottom: 0; */
+  padding-top: 0;
+  height: 70vh;
 }
 
-.section__pic-container {
+#socials-container {
+  gap: 10px;
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
-  /* border-radius: 2rem;  Somehow, this doesn't work!!!*/ 
+  justify-content: center;
 }
 
-.section__text {
+.profile__pic-container-1 {
+  margin-left: 10%;
+  float: left;
+}
+
+.profile__text {
   align-self: center;
   text-align: center;
 }
-.section__text p {
+.profile__text p {
   font-weight: 600;
 }
-
-.section__text__p1 {
+.profile__text__p1 {
   text-align: center;
-  font-size: 200%;
+  font-size: 300%;
 }
-.section__text__p2 {
+.profile__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
@@ -76,37 +80,16 @@ section {
   color: blue;
 }
 
-.title {
-  font-size: 3rem;
-  text-align: center;
-}
-
-#socials-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 1rem;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* ICONS */
-.icon {
-  cursor: pointer;
-  height: 4rem;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* BUTTONS */
 .btn-container {
   display: flex;
   justify-content: center;
-  gap: 5%;
+  gap: 2.5%;
 }
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
-  width: 8rem;
+  /* width: 8rem; */
   border-radius: 2rem;
 }
 .btn-color-1 {
@@ -127,12 +110,30 @@ section {
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 4rem;
+  margin-top: 20px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ABOUT SECTION */
 #about {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 10rem;
+}
+
+.about__pic-container {
+  display: flex;
+  float: left;
+  margin-right: 5%;
+  border-radius: 2rem;
+}
+.about-pic {
+  border-radius: 2rem;
 }
 
 .about-containers {
@@ -144,6 +145,7 @@ section {
   margin: 0;
   justify-content: center;
   flex-direction: column;
+  font-size: 16.25px;
 }
 
 .about-containers,
@@ -151,14 +153,17 @@ section {
   display: flex;
 }
 
-.about-pic {
-  border-radius: 2rem;
+.about__text__p1 {
+  text-align: center;
+  justify-content: center;
+  font-size: 125%;
 }
 
 .text-container-1 {
   font-size: 125%;
   text-align: justify;
   text-justify: distribute-all-lines;
+  margin-top: 2.5%;
 }
 .text-container-2 {
   font-size: 125%;
@@ -171,10 +176,22 @@ section {
   /* height: 50%; */
 }
 
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+.about_title {
+  font-size: 350%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2.5%;
+}
+
+.images-of-languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.images-of-languages img {
+  height: 50px;
+  width: 50px;
+  margin: 10px; /* Adjust the margin as needed for spacing */
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -184,9 +201,17 @@ section {
   padding-top: 10rem;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.projects_title {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2.5%;
+  font-size: 350%;
+}
+
+.projects__text {
+  text-align: center;
+  justify-content: center;
+  font-size: 125%;
 }
 
 .project-img {
@@ -205,6 +230,27 @@ section {
   border-color: rgb(163, 163, 163);
 }
 
+.projects-container {
+  display: flex;
+  justify-content: space-between; /* Adjust this property for different spacing */
+  flex-wrap: wrap;
+}
+
+.details-container {
+  width: 350px;
+  text-align: center;
+  margin-bottom: 20px; /* Adjust this property for different vertical spacing */
+}
+
+.article-container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.about-containers {
+  gap: 3%;
+}
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* CONTACT */
 #contact {
@@ -213,11 +259,18 @@ section {
   align-items: center;
   flex-direction: column;
   height: 80vh;
-  width: auto;
+  position: relative;
+  padding: 0;
+  padding-bottom: 50px;
 }
 #contact form {
-  width: 90%;
-  max-width: 600px;
+  width: 50%;
+}
+
+.conatct__text {
+  text-align: center;
+  justify-content: center;
+  font-size: 350%;
 }
 
 .input-group {
@@ -267,7 +320,7 @@ label {
   flex-basis: 48%;
   background: transparent;
   border-radius: 12.5px;
-  font-size: 125%;
+  font-size: 150%;
 }
 .button button:hover {
   background-image: linear-gradient(0deg,rgb(3, 39, 1), rgb(0, 102, 22), rgb(0, 182, 9), rgb(0, 255, 42));
@@ -287,17 +340,6 @@ label {
 .row .input-group {
   flex-basis: 48%;
   border-radius: 15px;
-}
-
-/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* FOOTER SECTION */
-footer {
-  height: 26vh;
-  margin: 0 1rem;
-}
-
-footer p {
-  text-align: center;
 }
 
 

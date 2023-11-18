@@ -38,9 +38,14 @@
 
 p {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    font-style: italic;
 }
+  
 
 /* This is for tablet */
 @media (width < 769px) {
