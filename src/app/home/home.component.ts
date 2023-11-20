@@ -9,8 +9,11 @@ import { EmailService } from '../email.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+  private pronunciationAudio: HTMLAudioElement;
 
-  constructor(private emailService: EmailService) {}
+  constructor(private emailService: EmailService) {
+    this.pronunciationAudio = new Audio('../../assets/images/pronunciation_vi_tuấn.mp3');
+  }
 
   ngAfterViewInit(): void {
     const typed = new Typed(".text", {
@@ -44,5 +47,9 @@ export class HomeComponent implements AfterViewInit {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  playPronunciation() {
+    this.pronunciationAudio.play();
   }
 }
