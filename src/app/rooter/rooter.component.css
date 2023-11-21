@@ -67,7 +67,7 @@ p {
 }
 
 /* This is for mobile */
-@media (width < 426px) {
+@media (width < 430px) {
     .footer_icon {
         margin-top: 1%;
     }

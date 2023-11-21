@@ -1,17 +1,20 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import Typed from 'typed.js';
-import { EmailService } from '../email.service';
+
+
+declare let Email: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements AfterViewInit {
   private pronunciationAudio: HTMLAudioElement;
 
-  constructor(private emailService: EmailService) {
+  constructor() {
     this.pronunciationAudio = new Audio('../../assets/images/pronunciation_vi_tuấn.mp3');
   }
 
@@ -25,26 +28,6 @@ export class HomeComponent implements AfterViewInit {
     });
   }
 
-  onSubmit(form: NgForm) {
-    const formData = form.value;
-
-    const mailOptions = {
-      from: formData.email,
-      to: 'tuan.tran6703@gmail.com', 
-      text: `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nMessage: ${formData.message}`
-    };
-
-    this.emailService.sendEmail(mailOptions)
-      .subscribe(
-        response => console.log('Email sent successfully', response),
-        error => console.error('Error sending email', error)
-      );
-  }
-
-  onClear(form: NgForm) {
-    form.reset();
-  }
-
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -52,4 +35,19 @@ export class HomeComponent implements AfterViewInit {
   playPronunciation() {
     this.pronunciationAudio.play();
   }
+
+  sendEmail(form: NgForm) {
+    if (form.valid) {
+      Email.send({
+        SecureToken: "3af98cf5-9ffe-44bf-b1d0-911edf42b100",
+        To: 'tuan.tran6703@gmail.com',
+        From: 'tranquangtuan060703@gmail.com',
+        Subject: `New message from ${form.value.firstName} ${form.value.lastName}`,
+        Body: `Message: ${form.value.message} <br> From: ${form.value.email}`
+      }).then(
+        () => alert("Message Sent Successfully")
+      );
+    }
+  }
+  
 }

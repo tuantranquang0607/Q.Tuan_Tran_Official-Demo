@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* GENERAL */
 * {
   margin: 0;
@@ -15,8 +17,12 @@
   bottom: -2rem;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* SECTIONS */
+.icon {
+  cursor: pointer;
+  height: 4rem;
+  margin-top: 20px;
+}
+
 section {
   padding-top: 4vh;
   height: 95vh;
@@ -50,6 +56,8 @@ section {
 }
 .profile__pic-container img {
   animation: pulse 2s infinite;
+  width: 500px;
+  height: 500px;
 }
 
 .speaker {
@@ -62,16 +70,16 @@ section {
     box-shadow: 0 0 0 5px rgba(0, 4, 255, 0.7);
   }
   25% {
-      box-shadow: 0 0 0 25px rgba(0, 3, 192, 0)
+      box-shadow: 0 0 0 25px rgba(65, 68, 255, 0)
   }
   50% {
-      box-shadow: 0 0 0 50px rgba(0, 10, 146, 0);
+      box-shadow: 0 0 0 50px rgba(124, 132, 255, 0);
   }
   75% {
-    box-shadow: 0 0 0 17px rgba(0, 6, 95, 0);
+    box-shadow: 0 0 0 75px rgba(191, 195, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 100px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
   }
 }
 
@@ -97,6 +105,7 @@ section {
 }
 
 .name {
+  font-family: 'Merriweather', serif;
   font-size: 150%;
   color: blue;
 }
@@ -110,7 +119,6 @@ section {
   font-weight: 600;
   transition: all 300ms ease;
   padding: 1rem;
-  /* width: 8rem; */
   border-radius: 2rem;
 }
 .btn-color-1 {
@@ -122,7 +130,7 @@ section {
 .btn-color-1:hover {
   cursor: pointer;
   color: white;
-  background-color: blue;
+  background-color: rgb(0, 0, 255);
 }
 .btn-color-2:hover {
   cursor: pointer;
@@ -130,13 +138,6 @@ section {
   background-color: blue;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* ICONS */
-.icon {
-  cursor: pointer;
-  height: 4rem;
-  margin-top: 20px;
-}
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* ABOUT SECTION */
@@ -157,9 +158,13 @@ section {
   margin-right: 2.5%;
   border-radius: 2rem;
 }
+.about__pic-container img {
+  width: 300px;
+  height: 450px;
+}
 .about-pic {
   border-radius: 15px;
-  box-shadow: rgb(59, 59, 59) 10px 10px 40px;
+  box-shadow: rgb(59, 59, 59) 15px 5px 25px;
 }
 .about-details-container {
   margin: 0;
@@ -180,11 +185,13 @@ section {
   font-size: 110%;
   text-align: justify;
   text-justify: distribute-all-lines;
+  margin-bottom: 0; 
 }
 .text-container-2 {
   font-size: 110%;
   text-align: justify;
   text-justify: distribute-all-lines;
+  margin-top: 0;
 }
 
 .about_title {
@@ -202,8 +209,9 @@ section {
 .images-of-languages img {
   height: 50px;
   width: 50px;
-  margin: 10px; /* Adjust the margin as needed for spacing */
+  margin: 0 10px;
 }
+
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* PROJECTS SECTION */
@@ -222,7 +230,7 @@ section {
 .projects__text {
   text-align: center;
   justify-content: center;
-  font-size: 125%;
+  font-size: 110%;
 }
 
 .project-img {
@@ -231,9 +239,26 @@ section {
   height: 90%;
 }
 
-.project-title {
-  margin: 1rem;
-  color: black;
+.web-projects-title {
+  margin-top: 0.5rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #ff7b00;
+}
+.game-projects-title {
+  margin-top: 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 137.5%;
+  color: #e74c3c;
+}
+.ui-projects-title {
+  margin-top: 0.5rem;
+  font-family: 'Pacifico', cursive;
+  color: #27ae60;
+}
+.artworks-title {
+  font-family: 'Delicious Handrawn', cursive;
+  font-size: 250%;
+  color: #8e44ad;
 }
 
 .project-btn {
@@ -264,9 +289,12 @@ section {
 .article-container:hover h2 {
   font-size: 120%; 
 }
-.article-container img,
-.article-container h2 {
+.article-container img, .article-container h2 {
   transition: width 0.25s ease, height 0.25s ease, font-size 0.25s ease; 
+  transition: all 0.25s ease-in-out;
+}
+.article-container img:hover {
+  transform: scale(1.5);
 }
 
 .about-containers {
@@ -389,112 +417,35 @@ label {
 
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media screen and (max-width: 1400px) {
-#profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-}
 
-.about-containers {
-    flex-wrap: wrap;
-}
-
-#contact,
-#projects {
-    height: fit-content;
-}
-}
-
-@media screen and (max-width: 1200px) {
-#desktop-nav {
-    display: none;
-}
-#hamburger-nav {
-    display: flex;
-}
-
-#experience,
-.experience-details-container {
-    margin-top: 2rem;
-}
-
-#profile,
-.section-container {
-    display: block;
-}
-
-.arrow {
-    display: none;
-}
-section,
-.section-container {
-    height: fit-content;
-}
-section {
-    margin: 0 5%;
-}
-.section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-}
-.about-containers {
-    margin-top: 0;
-}
-}
-
-@media screen and (max-width: 600px) {
-#contact,
-footer {
-    height: 40vh;
-}
-#profile {
-    height: 83vh;
-    margin-bottom: 0;
-}
-article {
-    font-size: 1rem;
-}
-footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-}
-.about-containers,
-.contact-info-upper-container,
-.btn-container {
-    flex-wrap: wrap;
-}
-.contact-info-container {
-    margin: 0;
-}
-.contact-info-container p,
-.nav-links li a {
-    font-size: 1rem;
-}
-.experience-sub-title {
-    font-size: 1.25rem;
-}
-.logo {
-    font-size: 1.5rem;
-}
-.nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-}
-.section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-}
-.section__text__p2 {
-    font-size: 1.25rem;
-}
-.title {
-    font-size: 2rem;
-}
-.text-container {
-    text-align: justify;
-}
-}
+/* RESPNSIVE FOR HD RESOLUTION */
+@media screen and (max-width: 1280px) {
+  #profile {
+    margin-top: 15rem;
+    margin-right: 20%;
+    margin-left: 10%;
+  }
   
+  .profile__pic-container {
+    margin-left: 0;
+  }
+  .profile__pic-container img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile__text {
+    padding-top: 0;
+  }
+  .profile__text__p1 {
+    font-size: 150%;
+  }
+  .profile__text__p2 {
+    font-size: 125%;
+  }
+
+  .about__pic-container img {
+    width: 150px;
+    height: 350px;
+  }
+}

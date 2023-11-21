@@ -50,11 +50,12 @@ a:hover::before {
 }
 
 .logo {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
   font-size: 250%;
+  text-shadow: 15px 10px 5px rgba(0, 0, 0, 0.5);
 }
-.logo:hover {
-  cursor: default;
-}
+
 
 /* HAMBURGER MENU FOR MOBILE & TABLET */
 #hamburger-nav {
@@ -128,34 +129,26 @@ a:hover::before {
 }
 
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-      display: none;
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* RESPNSIVE FOR HD RESOLUTION */
+@media screen and (max-width: 1280px) {
+  nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 7.5vh;
+    position: fixed;  
+    top: 0;           
+    width: 75%;
+  }
+
+  .logo {
+    font-size: 150%;
   }
   
-  #hamburger-nav {
-      display: flex;
-  }
-
-  .menu-links.open {
-    left: 0;
-    right: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .logo {
-      font-size: 1.5rem;
-  }
-
   .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-  }
-
-  .menu-links.open {
-    top: 150%;
+    font-size: 100%;
+    gap: 1.25rem;
   }
 }
   
