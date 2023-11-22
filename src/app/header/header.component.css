@@ -5,6 +5,13 @@
 }
 
 /* DESKTOP NAV */
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  font-size: 300%;
+  text-shadow: 15px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
 nav, .nav-links {
   display: flex;
 }
@@ -29,31 +36,31 @@ a {
   color: black;
   text-decoration: none;
   position: relative;
+  font-family: 'Cabin Sketch', sans-serif;
+  font-weight: bolder;
+  text-shadow: 15px 10px 5px rgba(0, 0, 0, 0.25);
 }
-a::before {
+a::before, a::after {
   content: '';
   position: absolute;
-  top: 100%;
+  top: 10%;
   bottom: 0;
-  left: 0;
   width: 0;
-  height: 5px;                   
-  background-color: blue;       
-  transition: width 0.5s ease;    
+  height: 5px;
+  background-color: blue;
+  transition: width 0.5s ease;
   border-radius: 50px;
 }
-a:hover {
-  color: blue;
-} 
-a:hover::before {
-  width: 100%;                    
+a::before {
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-.logo {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 900;
-  font-size: 250%;
-  text-shadow: 15px 10px 5px rgba(0, 0, 0, 0.5);
+a::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+a:hover::before, a:hover::after {
+  width: 100%;
 }
 
 
@@ -133,22 +140,30 @@ a:hover::before {
 
 /* RESPNSIVE FOR HD RESOLUTION */
 @media screen and (max-width: 1280px) {
+  .logo {
+    font-size: 225%;
+  }
+  
+  nav, .nav-links {
+    display: flex;
+  }
   nav {
     justify-content: space-around;
     align-items: center;
-    height: 7.5vh;
+    height: 10vh;
     position: fixed;  
     top: 0;           
-    width: 75%;
+    width: 100%;      
+    z-index: 1000;    
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(7.5px);
   }
-
-  .logo {
-    font-size: 150%;
+  .nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
   }
   
-  .nav-links {
-    font-size: 100%;
-    gap: 1.25rem;
-  }
 }
+
   

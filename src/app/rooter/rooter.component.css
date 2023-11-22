@@ -1,27 +1,31 @@
-/* .donation-qr-code {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 0.25%;
-} */
-
 .paypal-qr {
     float: left;
+    height: 175px;
+    width: 175px;
 }
-
 .acb-qr {
     float: right;
+    height: 175px;
+    width: 175px;
 }
 
 .footer_icon {
+    text-align: center;
+  }
+  
+  .footer_icon a {
+    display: inline-block;
+    margin: 0 2.5px;
+  }
+
+/* .footer_icon {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 0.25%;
-}
+} */
 .footer_icon i {
     letter-spacing: 7.5px;
-    font-size: 50px;
+    font-size: 60px;
     color: black;
 }
 .footer_icon i:hover {
@@ -43,8 +47,29 @@ p {
     white-space: nowrap;
     font-style: italic;
 }
-  
 
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* RESPNSIVE FOR HD RESOLUTION */
+@media screen and (max-width: 1280px) {
+    .paypal-qr {
+        height: 125px;
+        width: 125px;
+    }
+    
+    .acb-qr {
+        height: 125px;
+        width: 125px;
+    }
+    
+    .footer_icon i {
+        font-size: 40px;
+    }
+    .footer_icon i:hover {
+        color: blue;
+    }
+}
+  
 /* This is for tablet */
 @media (width < 769px) {
     .footer_icon {

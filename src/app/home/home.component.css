@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
-
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* GENERAL */
 * {
@@ -11,27 +10,42 @@
   scroll-behavior: smooth;
 }
 
-.arrow {
-  position: absolute;
-  right: 40.5rem;
-  bottom: -2rem;
-}
-
 .icon {
   cursor: pointer;
   height: 4rem;
   margin-top: 20px;
 }
+.icon-arrow-1 {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-top: 12.5%;
+  margin-left: 1%;
+}
+.icon-arrow-2 {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-top: 1%;
+  margin-left: 47.5%;
+}
+.icon-arrow-3 {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-left: 47.5%;
+}
+.icon-arrow-4 {
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-top: 2.5%;
+}
 
 section {
-  padding-top: 4vh;
-  height: 95vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-}
-.section-container {
-  display: flex;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -58,13 +72,8 @@ section {
   animation: pulse 2s infinite;
   width: 500px;
   height: 500px;
+  border-radius: 50%;
 }
-
-.speaker {
-  background-color: transparent;
-  border: none;
-}
-
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 5px rgba(0, 4, 255, 0.7);
@@ -81,6 +90,11 @@ section {
   100% {
     box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
   }
+}
+
+.speaker {
+  background-color: transparent;
+  border: none;
 }
 
 .profile__text {
@@ -122,15 +136,15 @@ section {
   border-radius: 2rem;
 }
 .btn-color-1 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: black 0.1rem solid;
 }
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: black 0.1rem solid;
 }
 .btn-color-1:hover {
   cursor: pointer;
   color: white;
-  background-color: rgb(0, 0, 255);
+  background-color: blue;
 }
 .btn-color-2:hover {
   cursor: pointer;
@@ -148,6 +162,17 @@ section {
   padding-top: 7.5rem;
 }
 
+.about_text {
+  text-align: center;
+  justify-content: center;
+  font-size: 110%;
+}
+.about_title {
+  font-size: 350%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1%;
+}
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -167,7 +192,6 @@ section {
   box-shadow: rgb(59, 59, 59) 15px 5px 25px;
 }
 .about-details-container {
-  margin: 0;
   justify-content: center;
   flex-direction: column;
   font-size: 16.25px;
@@ -175,30 +199,16 @@ section {
 .about-containers, .about-details-container {
   display: flex;
 }
-.about_text {
-  text-align: center;
-  justify-content: center;
-  font-size: 110%;
-}
 
 .text-container-1 {
   font-size: 110%;
   text-align: justify;
   text-justify: distribute-all-lines;
-  margin-bottom: 0; 
 }
 .text-container-2 {
   font-size: 110%;
   text-align: justify;
   text-justify: distribute-all-lines;
-  margin-top: 0;
-}
-
-.about_title {
-  font-size: 350%;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 1%;
 }
 
 .images-of-languages {
@@ -233,10 +243,25 @@ section {
   font-size: 110%;
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+.web-projects-img {
+  height: 500px;
+  width: 300px;
+  border-radius: 15px;
+}
+.game-projects-img {
+  height: 500px;
+  width: 300px;
+  border-radius: 15px;
+}
+.ui-projects-img {
+  height: 500px;
+  width: 300px;
+  border-radius: 15px;
+}
+.artworks-img {
+  height: 500px;
+  width: 300px;
+  border-radius: 15px;
 }
 
 .web-projects-title {
@@ -261,11 +286,6 @@ section {
   color: #8e44ad;
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
-
 .projects-container {
   display: flex;
   justify-content: space-between; 
@@ -279,15 +299,12 @@ section {
 }
 
 .article-container {
-  border-radius: 15px;
   overflow: hidden;
+  border-radius: 15px;
 }
 .article-container:hover img {
   width: 350px; 
   height: 550px; 
-}
-.article-container:hover h2 {
-  font-size: 120%; 
 }
 .article-container img, .article-container h2 {
   transition: width 0.25s ease, height 0.25s ease, font-size 0.25s ease; 
@@ -311,14 +328,14 @@ section {
   flex-direction: column;
   height: 80vh;
   position: relative;
-  padding: 0;
-  padding-bottom: 50px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 #contact form {
   width: 50%;
 }
 
-.conatct__text {
+.contact__text {
   text-align: center;
   justify-content: center;
   font-size: 350%;
@@ -383,9 +400,9 @@ label {
   top: 125%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 125%;
   background: linear-gradient(0deg, transparent, #00ff2a);
-  transform: perspective(2.5em) rotateX(40deg) scale(1, 0.35);
+  transform: perspective(5em) rotateX(45deg) scale(1, 0.35);
   filter: blur(1em);
 }
 .button button:hover {
@@ -417,25 +434,64 @@ label {
 
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
 /* RESPNSIVE FOR HD RESOLUTION */
 @media screen and (max-width: 1280px) {
-  #profile {
-    margin-top: 15rem;
-    margin-right: 20%;
-    margin-left: 10%;
-  }
-  
-  .profile__pic-container {
-    margin-left: 0;
-  }
-  .profile__pic-container img {
-    width: 300px;
-    height: 300px;
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /* GENERAL */
+  .socials-container .icon {
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 20px;
   }
 
+  .icon-arrow-1 {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin-top: 15.5%;
+  }
+  .icon-arrow-2 {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin-top: 1%;
+  }
+  .icon-arrow-3 {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+  .icon-arrow-4 {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    margin-top: 2.5%;
+  }
+
+  section {
+    margin: 0 7.5rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /* PROFILE SECTION */
+  #profile {
+    margin-top: 10rem;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 100%;
+  }
+  .profile__pic-container {
+    margin-left: 7.5%;
+  }
+  .profile__pic-container img {
+    width: 400px;
+    height: 400px;
+  }
   .profile__text {
-    padding-top: 0;
+    padding-top: 7.5%;
   }
   .profile__text__p1 {
     font-size: 150%;
@@ -447,5 +503,123 @@ label {
   .about__pic-container img {
     width: 150px;
     height: 350px;
+  }
+
+  .icon {
+    cursor: pointer;
+    height: 4rem;
+    margin-top: 20px;
+  }
+  
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /* ABOUT SECTION */
+  #about {
+    padding-top: 5rem;
+    height: 100%;
+  }
+  .about_text {
+    text-align: center;
+    justify-content: center;
+    font-size: 75%;
+  }
+  .about_title {
+    font-size: 250%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5%;
+  }
+  .about__pic-container img {
+    width: 200px;
+    height: 350px;
+  }
+  .about-details-container {
+    font-size: 100%;
+  }
+
+  .text-container-1 {
+    font-size: 91.5%;
+  }
+  .text-container-2 {
+    font-size: 91.5%;
+  }
+
+  .images-of-languages img {
+    height: 40px;
+    width: 40px;
+  }
+
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /* PROJECTS SECTION */
+  #projects {
+    height: 100%;
+  }
+
+  .projects_title {
+    font-size: 250%;
+    margin-bottom: 1.5%;
+  }
+  
+  .projects__text {
+    font-size: 75%;
+  }
+
+  .about-containers {
+    margin-bottom: 0;
+    gap: 2%;
+  }
+
+  .web-projects-img {
+    height: 425px;
+    width: 225px;
+  }
+  .game-projects-img {
+    height: 425px;
+    width: 225px;
+  }
+  .ui-projects-img {
+    height: 425px;
+    width: 225px;
+  }
+  .artworks-img {
+    height: 425px;
+    width: 225px;
+  }
+  
+  .web-projects-title {
+    font-size: 125%;
+    margin-top: 1.5px;
+  }
+  .game-projects-title {
+    margin-top: 5px;
+    font-size: 97.5%;
+  }
+  .ui-projects-title {
+    margin-top: 2.5px;
+    font-size: 150%;
+  }
+  .artworks-title {
+    font-size: 200%;
+  }
+
+  .article-container:hover img {
+    width: 275px; 
+    height: 475px; 
+  }
+
+  /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /* CONTACT */
+  #contact {
+    margin-bottom: 5.25rem;
+    padding-top: 10rem;
+  }
+  #contact form {
+    width: 55%;
+  }
+  #contact p {
+    font-size: 15px;
+  }
+
+  .contact__text {
+    font-size: 200%;
   }
 }
