@@ -6,8 +6,12 @@
   </div>
 
   <div class="profile__text">
-    <p class="profile__text__p1">Hi👋, I'm <br> <span class="name">Tuan</span><button class="speaker" (click)="playPronunciation()">(🔊)</button>😊,</p>
-    <audio class="sound" src="../../assets/images/pronunciation_vi_tuấn.mp3"></audio>
+    <p class="profile__text__p1">
+      Hi👋, I'm <br> 
+      <span class="name">Tuan</span>
+      <button class="speaker" (click)="playPronunciation()">(🔊)</button>😊,
+    </p>
+    <audio src="../../assets/images/pronunciation_vi_tuấn.mp3"></audio>
     <p class="profile__text__p2">who's trying to be <span class="text"></span></p>
 
     <div class="btn-container">
@@ -141,7 +145,7 @@
   <h1 class="projects_title">Projects</h1>
 
   <div class="experience-details-container">
-    <div class="about-containers">
+    <div class="projects-containers">
       <div class="details-container color-container">
         <div class="article-container">
           <a href="web-projects">
@@ -239,20 +243,6 @@
       <button type="reset">Clear <i class="fa-sharp fa-solid fa-trash"></i></button>
     </div>
   </form>
-
-  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail() {
-      Email.send({
-        SecureToken: "3af98cf5-9ffe-44bf-b1d0-911edf42b100",
-        To: 'tuan.tran6703@gmail.com',
-        From: document.getElementById("email").value,
-        Body: "Message: " + document.getElementById("message").value
-      }).then(
-        message => alert("Message Sent Succesfully")
-      );
-    }
-  </script> -->
 
   <img
     src="../../assets/images/up-arrow.jpg"

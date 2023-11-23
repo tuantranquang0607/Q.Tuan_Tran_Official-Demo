@@ -50,20 +50,21 @@ p {
 
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* RESPNSIVE FOR HD RESOLUTION */
-@media screen and (max-width: 1280px) {
+
+/* RESPNSIVE FOR FullHD RESOLUTION */
+@media screen and (max-width: 1920px) {
     .paypal-qr {
-        height: 125px;
-        width: 125px;
+        height: 150px;
+        width: 150px;
     }
     
     .acb-qr {
-        height: 125px;
+        height: 150px;
         width: 125px;
     }
     
     .footer_icon i {
-        font-size: 40px;
+        font-size: 50px;
     }
     .footer_icon i:hover {
         color: blue;
@@ -120,3 +121,8 @@ p {
         margin-bottom: 0;
     }
 }
+
+/* RESPNSIVE FOR QuadHD RESOLUTION */
+@media screen and (max-width: 2560px) {
+    
+  }
