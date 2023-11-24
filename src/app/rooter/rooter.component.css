@@ -1,31 +1,25 @@
 .paypal-qr {
     float: left;
-    height: 175px;
-    width: 175px;
+    height: 150px;
+    width: 150px;
 }
 .acb-qr {
     float: right;
-    height: 175px;
-    width: 175px;
+    height: 150px;
+    width: 150px;
 }
 
 .footer_icon {
-    text-align: center;
-  }
-  
-  .footer_icon a {
-    display: inline-block;
-    margin: 0 2.5px;
-  }
+text-align: center;
+}
 
-/* .footer_icon {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-} */
+.footer_icon a {
+display: inline-block;
+margin: 0 2.5px;
+}
 .footer_icon i {
     letter-spacing: 7.5px;
-    font-size: 60px;
+    font-size: 50px;
     color: black;
 }
 .footer_icon i:hover {
@@ -36,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
 }
 
 p {
@@ -51,49 +46,8 @@ p {
 
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* RESPNSIVE FOR FullHD RESOLUTION */
-@media screen and (max-width: 1920px) {
-    .paypal-qr {
-        height: 150px;
-        width: 150px;
-    }
-    
-    .acb-qr {
-        height: 150px;
-        width: 125px;
-    }
-    
-    .footer_icon i {
-        font-size: 50px;
-    }
-    .footer_icon i:hover {
-        color: blue;
-    }
-}
-  
-/* This is for tablet */
-@media (width < 769px) {
-    .footer_icon {
-        margin-top: 0.5%;
-    }
-    .footer_icon i {
-        font-size: 40px;
-    }
-
-    .paypal-qr {
-        float: left;
-        height: 25%;
-        width: 25%;
-    }
-    .acb-qr {
-        float: right;
-        height: 25%;
-        width: 25%;
-    }
-}
-
 /* This is for mobile */
-@media (width < 430px) {
+@media (max-width: 430px) {
     .footer_icon {
         margin-top: 1%;
     }
@@ -122,7 +76,46 @@ p {
     }
 }
 
+/* This is for tablet */
+@media (max-width: 1024px) {
+    .footer_icon {
+        margin-top: 0.5%;
+    }
+    .footer_icon i {
+        font-size: 40px;
+    }
+
+    .paypal-qr {
+        float: left;
+        height: 25%;
+        width: 25%;
+    }
+    .acb-qr {
+        float: right;
+        height: 25%;
+        width: 25%;
+    }
+}
+
+/* RESPNSIVE FOR FullHD RESOLUTION */
+@media screen and (max-width: 1920px) {
+    .paypal-qr {
+        
+    }
+    
+    .acb-qr {
+        
+    }
+    
+    .footer_icon i {
+        
+    }
+    .footer_icon i:hover {
+        
+    }
+}
+
 /* RESPNSIVE FOR QuadHD RESOLUTION */
 @media screen and (max-width: 2560px) {
     
-  }
+}
