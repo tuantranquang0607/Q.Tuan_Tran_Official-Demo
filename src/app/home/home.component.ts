@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import Typed from 'typed.js';
+import { FormBuilder, Validators } from '@angular/forms';
 
 
 declare let Email: any;
@@ -12,9 +12,14 @@ declare let Email: any;
 })
 
 export class HomeComponent implements AfterViewInit {
+  firstName: any;
+  lastName: any;
+  email: any;
+  message: any;
+
   private pronunciationAudio: HTMLAudioElement;
 
-  constructor() {
+  constructor(private fb: FormBuilder) {
     this.pronunciationAudio = new Audio('../../assets/images/pronunciation_vi_tuấn.mp3');
   }
 
@@ -36,18 +41,15 @@ export class HomeComponent implements AfterViewInit {
     this.pronunciationAudio.play();
   }
 
-  sendEmail(form: NgForm) {
-    if (form.valid) {
-      Email.send({
-        SecureToken: "3af98cf5-9ffe-44bf-b1d0-911edf42b100",
-        To: 'tuan.tran6703@gmail.com',
-        From: 'tranquangtuan060703@gmail.com',
-        Subject: `New message from ${form.value.firstName} ${form.value.lastName}`,
-        Body: `Message: ${form.value.message} <br> From: ${form.value.email}`
-      }).then(
-        () => alert("Message Sent Successfully")
-      );
-    }
+  contactForm = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['', Validators.required],
+  });
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.contactForm.value);
   }
-  
 }
