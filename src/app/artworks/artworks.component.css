@@ -1,0 +1,12 @@
+section {
+    height: fit-content;
+    margin: 0 10vh;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+h1 {
+    align-items: center;
+    text-align: center;
+}

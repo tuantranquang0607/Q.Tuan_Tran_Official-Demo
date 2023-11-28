@@ -1,0 +1,15 @@
+section {
+    height: fit-content;
+    margin: 0 10vh;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    transform: scaleY(1.75);
+}
+

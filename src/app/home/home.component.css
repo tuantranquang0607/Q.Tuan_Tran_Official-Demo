@@ -181,13 +181,13 @@ section {
 }
 
 .text-container-1 {
-  font-size: 19px;
+  font-size: 20px;
   text-align: justify;
   text-justify: distribute-all-lines;
   margin-bottom: -1.5rem;
 }
 .text-container-2 {
-  font-size: 19px;
+  font-size: 20px;
   text-align: justify;
   text-justify: distribute-all-lines;
 }
@@ -282,7 +282,6 @@ section {
   height: 70px;
   width: 70px;
   margin-left: 47.5%;
-  margin-top: 17.5px;
 }
 
 
