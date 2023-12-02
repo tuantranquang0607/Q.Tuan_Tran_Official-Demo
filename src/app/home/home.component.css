@@ -165,7 +165,7 @@ section {
 }
 .about__pic-container img {
   width: 300px;
-  height: 450px;
+  height: 475px;
 }
 .about-pic {
   border-radius: 15px;
@@ -190,6 +190,7 @@ section {
   font-size: 20px;
   text-align: justify;
   text-justify: distribute-all-lines;
+  margin-bottom: 0.25%;
 }
 
 .images-of-languages {

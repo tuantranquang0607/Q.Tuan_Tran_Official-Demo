@@ -7,9 +7,14 @@ section {
 }
 
 h1 {
-    align-items: center;
     text-align: center;
-    font-size: medium;
+    font-size: large;
     transform: scaleY(1.75);
 }
+
+p {
+    text-align: center;
+    margin-top: 2.5%;
+}
+
 
