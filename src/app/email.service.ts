@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 })
 
 export class EmailService {
-  private baseUrl = 'http://localhost:3000'; // Update with your backend server URL
+  private baseUrl = 'http://localhost:3002'; // Update with your backend server URL
 
   constructor(private http: HttpClient) {}
 
@@ -22,4 +22,14 @@ export class EmailService {
             })
         );
     }
+  
+    testConnection(options: any): Observable<any> {
+      return this.http.post<any>(`${this.baseUrl}/test`, options)
+          .pipe(
+              catchError(error => {
+                  console.error('Error:', error);
+                  throw error;
+              })
+          );
+      }
 }

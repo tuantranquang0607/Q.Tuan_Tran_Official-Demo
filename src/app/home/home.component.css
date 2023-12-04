@@ -140,7 +140,7 @@ section {
   position: relative;
   margin-bottom: 7.5rem;
   padding-top: 5.5rem;
-  height: 87.5vh;
+  /* height: 87.5vh; */
 }
 
 .about_text {
@@ -217,7 +217,7 @@ section {
 #projects {
   position: relative;
   padding-top: 5.75%;
-  height: 97.5vh;
+  /* height: 97.5vh; */
 }
 
 .projects_title {
@@ -293,7 +293,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 80vh;
+  /* height: 80vh; */
   position: relative;
   margin-top: 75px;
 }
@@ -406,7 +406,7 @@ label {
   height: 70px;
   width: 70px;
   margin-top: 1%;
-  margin-bottom: -45px;
+  /* margin-bottom: -45px; */
 }
 
 p {
