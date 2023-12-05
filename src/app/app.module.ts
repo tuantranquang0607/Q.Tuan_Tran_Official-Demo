@@ -13,6 +13,7 @@ import { GameProjectsComponent } from './game-projects/game-projects.component';
 import { UIProjectsComponent } from './uiprojects/uiprojects.component';
 import { ArtworksComponent } from './artworks/artworks.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,4 +34,5 @@ import { ArtworksComponent } from './artworks/artworks.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
