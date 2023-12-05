@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import Typed from 'typed.js';
 import { FormBuilder, Validators } from '@angular/forms';
-
+import { EmailService } from '../email.service';
 
 declare let Email: any;
 
@@ -19,7 +19,7 @@ export class HomeComponent implements AfterViewInit {
 
   private pronunciationAudio: HTMLAudioElement;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private emailService: EmailService) {
     this.pronunciationAudio = new Audio('../../assets/images/pronunciation_vi_tuấn.mp3');
   }
 
@@ -48,8 +48,13 @@ export class HomeComponent implements AfterViewInit {
     message: ['', Validators.required],
   });
 
-  onSubmit() {
+  onSubmit(options: any): void {
     // TODO: Use EventEmitter with form value
-    console.warn(this.contactForm.value);
+    console.warn(options);
+    const { firstName, lastName, email, message } = options;
+
+    this.emailService.sendEmail({from: "nguyen.ngoc.hai@vsi-international.com", to: email, text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`}).subscribe((data: any) => {
+      console.log("result", data)
+    });
   }
 }

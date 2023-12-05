@@ -52,14 +52,14 @@
     </div>
   </div>
 
-  <img 
-    src="../../assets/images/down-arrow.png" 
-    alt="Arrow icon" 
-    class="icon-arrow-1" 
-    onclick="location.href='./#about'"
-    />
+ 
 </section>
-
+<img 
+  src="../../assets/images/down-arrow.png" 
+  alt="Arrow icon" 
+  class="icon-arrow-1" 
+  onclick="location.href='./#about'"
+/>
 
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- About container -->
@@ -215,7 +215,7 @@
   <h1 class="contact__text">Get in Touch</h1>
   <p>Find me at <a href="mailto:tuan.tran6703@gmail.com">tuan.tran6703@gmail.com</a></p>
   <br>
-  <form #contactForm="ngForm" >
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit({ firstName: firstName, lastName: lastName, email: email, message: message })">
     <div class="row">
       <div class="input-group">
         <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" style="border-radius: 12.5px;" required>
