@@ -22,7 +22,7 @@ section {
   justify-content: center;
   position: relative;
   margin-top: 12.5%;
-  height: 87.5vh;
+  height: 68vh;
 }
 
 .profile__pic-container{
@@ -209,6 +209,7 @@ section {
   height: 70px;
   width: 70px;
   margin-left: 47.5%;
+  margin-top: 1.5%;
 }
 
 

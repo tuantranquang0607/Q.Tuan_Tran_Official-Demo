@@ -12,7 +12,7 @@ router.post("/submit-form", (req, res) => {
     });
 
     // Can thay doi dia chi email va SENDGRID_KEY phu hop
-    transporter.sendMail({ from: "nguyen.ngoc.hai@vsi-international.com", to: "hainn2009@gmail.com", text: req.body.text }, (error, info) => {
+    transporter.sendMail({ from: "nguyen.ngoc.hai@vsi-international.com", to: "tuan.tran6703@gmail.com", text: req.body.text }, (error, info) => {
         if (error) {
             console.error("Error sending email:", error);
             return res.status(500).send(error.toString());

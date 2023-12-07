@@ -1,4 +1,5 @@
 <header>
+<!-- Desktop Navigation -->
   <nav id="desktop-nav">
     <div class="logo">Q. Tuan Tran</div>
     <div>
@@ -13,6 +14,7 @@
     </div>
   </nav>
 
+<!-- Mobile Navigation -->
   <nav id="hamburger-nav">
     <div class="logo">Q. Tuan Tran</div>
     <div class="hamburger-menu">
@@ -21,13 +23,16 @@
         <span></span>
         <span></span>
       </div>
-      <div class="menu-links">
-        <li><a href="home">Home</a></li>
-        <li><a href="web-projects" (click)="toggleMenu()">Web Projects</a></li>
-        <li><a href="game-projects" (click)="toggleMenu()">Game Projects</a></li>
-        <li><a href="ui-projects" (click)="toggleMenu()">UI Projects</a></li>
-        <li><a href="artworks" (click)="toggleMenu()">Artworks</a></li>
-        <li><a href="#contact" (click)="toggleMenu()">Contact</a></li>
+
+      <div *ngIf="isMenuOpen" class="menu-links">
+        <ul class="nav-links">
+          <li><a href="home">Home</a></li>
+          <li><a href="web-projects">Web Projects</a></li>
+          <li><a href="game-projects">Game Projects</a></li>
+          <li><a href="ui-projects">UI Projects</a></li>
+          <li><a href="artworks">Artworks</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
   </nav>
