@@ -22,14 +22,4 @@ export class EmailService {
             })
         );
     }
-  
-    testConnection(options: any): Observable<any> {
-      return this.http.post<any>(`${this.baseUrl}/test`, options)
-          .pipe(
-              catchError(error => {
-                  console.error('Error:', error);
-                  throw error;
-              })
-          );
-      }
 }
