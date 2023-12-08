@@ -7,13 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  isMenuOpen: boolean = false;
+
   toggleMenu() {
-    const menu = document.querySelector("#hamburger-nav .menu-links");
-    const icon = document.querySelector("#hamburger-nav .hamburger-icon");
-    if (menu && icon) {
-      menu.classList.toggle("open");
-      icon.classList.toggle("open");
-    }
+    console.log('Toggle menu clicked');
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log('isMenuOpen:', this.isMenuOpen);
   }
 }
 
