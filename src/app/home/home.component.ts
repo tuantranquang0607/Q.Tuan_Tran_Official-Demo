@@ -53,7 +53,7 @@ export class HomeComponent implements AfterViewInit {
     console.warn(options);
     const { firstName, lastName, email, message } = options;
 
-    this.emailService.sendEmail({from: "nguyen.ngoc.hai@vsi-international.com", to: email, text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`}).subscribe((data: any) => {
+    this.emailService.sendEmail({ text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nMessage: ${message}`}).subscribe((data: any) => {
       console.log("result", data)
     });
   }
