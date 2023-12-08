@@ -27,9 +27,10 @@ export class EmailService {
       return this.http.post<any>(`${this.baseUrl}/test`, options)
         .pipe(
             catchError(error => {
-                console.error('Error:', error);
-                throw error;
+                  console.error('Error:', error);
+                  throw error;
             })
         );
     }
+>>>>>>>>> Temporary merge branch 2
 }
