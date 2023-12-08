@@ -32,5 +32,4 @@ export class EmailService {
             })
         );
     }
->>>>>>>>> Temporary merge branch 2
 }
