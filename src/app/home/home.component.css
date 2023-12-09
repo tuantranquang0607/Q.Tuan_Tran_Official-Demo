@@ -16,7 +16,6 @@ section {
   min-height: fit-content;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* PROFILE SECTION */
 #profile {
   justify-content: center;
@@ -131,6 +130,7 @@ section {
   height: 70px;
   width: 70px;
   margin-left: 47.5%;
+  margin-top: 0.25%;
 }
 
 
@@ -140,7 +140,6 @@ section {
   position: relative;
   margin-bottom: 7.5rem;
   padding-top: 5.5rem;
-  /* height: 87.5vh; */
 }
 
 .about_text {
@@ -209,7 +208,6 @@ section {
   height: 70px;
   width: 70px;
   margin-left: 47.5%;
-  margin-top: 1.5%;
 }
 
 
@@ -335,7 +333,7 @@ input, textarea {
   font-size: 20px;
 }
 input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
-  top: -45px;
+  top: -40px;
   border-radius: 15px;
 }
 
@@ -348,7 +346,7 @@ label {
   color: black;
   cursor: text;
   transition: 0.25s;
-  font-size: 20px;
+  font-size: 17.5px;
 }
 
 .button {
@@ -407,11 +405,35 @@ label {
   height: 70px;
   width: 70px;
   margin-top: 1%;
-  /* margin-bottom: -45px; */
 }
 
 p {
   margin-bottom: 7.5px;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* RESPONSIVENESS FOR MOBILE */
+@media (max-width: 435px) {
+  /* PROFILE SECTION */
+  .profile__pic-container img {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* PROJECTS SECTION */
+  .projects-containers {
+    display: block;
+  }
+
+  .web-projects-img,
+  .game-projects-img,
+  .ui-projects-img,
+  .artworks-img {
+    width: 125px;
+    height: 200px;
+    border-radius: 15px;
+  }
 }
 
 
