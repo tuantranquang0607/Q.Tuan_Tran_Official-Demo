@@ -1,4 +1,4 @@
 # Q.Tuan_Tran_Official
-My only legitimate, personal portfolio website.
+I tried to make a portfolio website.
 
-I use HTML, CSS, TypesScript, JavaScript, Bootstrap, and Angular framework to build this website.
+I used HTML, CSS, TypesScript, JavaScript, Bootstrap, and Angular framework to build this website.
